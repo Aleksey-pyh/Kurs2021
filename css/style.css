@@ -156,7 +156,16 @@ h2{
     text-transform: uppercase;
     margin: 90px 0 40px 0;
 }
-
+.bgContent{
+    position: relative;
+}
+#particles-js{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 .lineH1{
     border-top: 3px solid #E2E2E2;
     min-width: 238px;
