@@ -62,7 +62,9 @@
     font-style: normal;
     font-display: swap;
 }
-
+.modal{
+    display: none;
+}
 body{
     margin: 0;
     padding: 0;
@@ -439,6 +441,18 @@ h2{
     content: none;
 }
 
+.spoiler >  input + .box {
+	display: none;
+}
+.spoiler >  input:checked + .box {
+	display: block;
+}
+:focus{
+    outline: none;
+}
+summary{
+    cursor: pointer;
+}
 
 .centerBlock{
     display: flex;
@@ -507,6 +521,7 @@ footer .content{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .footDesc p,.footDesc a{
     
@@ -549,7 +564,7 @@ footer .content{
         width: 55px;
         height: 55px;
         margin-right: 90px;
-        font-size: 16px;
+        font-size: 14px;
     }
     .arrow-1 {
         width: 40px;
@@ -599,9 +614,6 @@ footer .content{
     .howToGet_item{
         max-width: 100%;
     }
-    .footDesc a{
-        text-align: end;
-    }
 }
 /* стилизация содержимого страницы */
 
@@ -626,6 +638,7 @@ footer .content{
 /* при отображении модального окно */
 .modal:target {
     opacity: 1; /* делаем окно видимым */
+    display: block;
 	  pointer-events: auto; /* элемент видим для событий мыши */
     overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
@@ -633,12 +646,12 @@ footer .content{
 .modal-dialog {
     position: relative;
     width: auto;
-    margin: 10px;
+    margin: auto;
 }
 @media (min-width: 576px) {
   .modal-dialog {
       max-width: 500px;
-      margin: 30px auto; /* для отображения модального окна по центру */
+      margin: auto; /* для отображения модального окна по центру */
   }
 }
 /* свойства для блока, содержащего контент модального окна */ 
@@ -680,7 +693,7 @@ footer .content{
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 50px 0 15px;
+    padding: 35px 0 15px;
 }
 .modal-title {
     margin-top: 0;
