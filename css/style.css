@@ -66,7 +66,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Circe';
+    font-family: 'Circe',sans-serif;
 }
 .content{
     max-width: 1280px;
