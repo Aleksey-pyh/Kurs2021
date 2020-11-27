@@ -90,6 +90,11 @@ header{
     color: #2C2A29;
     margin-right: 25px;
 }
+.contact{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
 header .registration,.registration{
     
     font-style: normal;
