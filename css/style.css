@@ -1,6 +1,72 @@
+@font-face {
+    font-family: 'Circe';
+    src: url('Circe-Light.eot');
+    src: local('Circe Light'), local('Circe-Light'),
+        url('./fonts/Circe-Light.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Circe-Light.woff2') format('woff2'),
+        url('./fonts/Circe-Light.woff') format('woff'),
+        url('./fonts/Circe-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circe Extra';
+    src: url('Circe-ExtraBold.eot');
+    src: local('Circe Extra Bold'), local('Circe-ExtraBold'),
+        url('./fonts/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Circe-ExtraBold.woff2') format('woff2'),
+        url('./fonts/Circe-ExtraBold.woff') format('woff'),
+        url('./fonts/Circe-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('Circe-Thin.eot');
+    src: local('Circe Thin'), local('Circe-Thin'),
+        url('./fonts/Circe-Thin.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Circe-Thin.woff2') format('woff2'),
+        url('./fonts/Circe-Thin.woff') format('woff'),
+        url('./fonts/Circe-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('Circe-Regular.eot');
+    src: local('Circe'), local('Circe-Regular'),
+        url('./fonts/Circe-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Circe-Regular.woff2') format('woff2'),
+        url('./fonts/Circe-Regular.woff') format('woff'),
+        url('./fonts/Circe-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circe';
+    src: url('Circe-Bold.eot');
+    src: local('Circe Bold'), local('Circe-Bold'),
+        url('./fonts/Circe-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/Circe-Bold.woff2') format('woff2'),
+        url('./fonts/Circe-Bold.woff') format('woff'),
+        url('./fonts/Circe-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Circe';
 }
 .content{
     max-width: 1280px;
@@ -16,7 +82,7 @@ header{
     margin: 30px 0;
 }
 .contact a{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -25,7 +91,7 @@ header{
     margin-right: 25px;
 }
 header .registration,.registration{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -52,7 +118,7 @@ header .registration,.registration{
     max-width: 530px;
 }
 h1{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: 800;
     font-size: 62px;
@@ -65,7 +131,7 @@ h1{
     justify-content: flex-start;
 }
 h2{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: 800;
     font-size: 30px;
@@ -106,7 +172,7 @@ h2{
     margin: 0 0 5px 0;
 }
 .blackBold{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -114,7 +180,7 @@ h2{
     color: #2C2A29;
 }
 .OrangeBold{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -122,7 +188,7 @@ h2{
     color: #E04E39;
 }
 .orange{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -130,7 +196,7 @@ h2{
     color: #E04E39;
 }
 .black{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -149,7 +215,7 @@ h2{
     border: 2px solid #E04E39;
     border-radius: 50%;
     background-color: transparent;
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: 800;
     font-size: 20px;
@@ -236,7 +302,7 @@ h2{
     }
 }
 .enterBlock p{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -265,7 +331,7 @@ h2{
     padding-left:35px;
 }
 .time{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -313,7 +379,7 @@ h2{
     justify-content: center;
 }
 .textBlock p{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -375,7 +441,7 @@ h2{
     flex-direction: column;
 }
 .centerBlock p{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -412,7 +478,7 @@ h2{
     left: 9px;
 }
 .howToGet_item .title{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: bold;
     font-size: 25px;
@@ -422,7 +488,7 @@ h2{
     border-bottom: 3px solid #E0DFDF;
 }
 .howToGet_item .desc{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -438,7 +504,7 @@ footer .content{
     align-items: center;
 }
 .footDesc p,.footDesc a{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -660,7 +726,7 @@ footer .content{
 }
 .modal h3{
     text-align: center;
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
@@ -677,7 +743,7 @@ form input[type=text]{
     outline: none;
 }
 form input[type=text]::placeholder{
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -687,7 +753,7 @@ form input[type=text]::placeholder{
 .howToGetForm{
     display: flex;
     flex-direction: column;
-    font-family: 'Circe';
+    
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
