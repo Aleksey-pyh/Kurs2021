@@ -13,6 +13,13 @@ closeBut.onclick = function() {
     event.preventDefault();
     modal.classList.remove('active');
 };
+window.onload = function() {
+    setTimeout(anim, 300);
+};
+var anim = function() {
+document.querySelector('header').classList.add('headActive');
+document.querySelector('.leftAlign').classList.add('headActive');
+};
 /* -----------------------------------------------
 /* How to use? : Check the GitHub README
 /* ----------------------------------------------- */
@@ -44,7 +51,7 @@ particlesJS('particles-js',
         "type": "circle",
         "stroke": {
           "width": 0,
-          "color": "#000000"
+          "color": "#E04E39"
         },
         "polygon": {
           "nb_sides": 5

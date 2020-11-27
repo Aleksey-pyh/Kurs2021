@@ -156,7 +156,7 @@ h2{
     text-transform: uppercase;
     margin: 90px 0 40px 0;
 }
-.bgContent{
+.timeline{
     position: relative;
 }
 #particles-js{
@@ -311,6 +311,19 @@ h2{
     font-size: 16px;
     line-height: 112.4%;
     color: #2C2A29;
+}
+/*animFristScreen*/
+header{
+    transform: translateY(-500%);
+    transition: all .6s;
+}
+
+.leftAlign{
+    transform: translateX(-500%);
+    transition: all .6s;
+}
+.headActive{
+    transform: none;
 }
 @media (max-width:1199px){
     .bgContent .content{
