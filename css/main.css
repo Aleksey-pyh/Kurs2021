@@ -208,65 +208,8 @@ footer .content{
     color: #2C2A29;
     text-decoration: none;
 }
-@media (max-width:1199px){
-    .bgContent .content{
-        background-color: rgba(255,255,255,0.7);
-    }
-    .lineH1 {
-        border-top: 3px solid #afafaf;
-    }
-    .introItem:before{
-        background-color: #afafaf;
-    }
-}
+
 @media (max-width:595px){
-    header .content{
-        flex-direction: column;
-        align-items: center;
-    }
-    .contact{
-        justify-content: center;
-    }
-    .contact a {
-        margin: 0;
-        margin-bottom: 10px;
-    }
-    .bgContent {
-        background-size: cover;
-    }
-    .lineH1{
-        display: none;
-    }
-    .firstRow {
-        margin-left: 0;
-    }
-    .enterBlock {
-        max-width: 100%;
-    }
-    .enterBlock button {
-        width: 55px;
-        height: 55px;
-        margin-right: 90px;
-        font-size: 14px;
-    }
-    .arrow-1 {
-        width: 40px;
-        right: -50px;
-    }
-    .arrow-1 div {
-        width: 50px;
-    }
-    @keyframes arrow-1 {
-        0% {
-            right: -50px;;
-        }
-        50% {
-            right: -65px;;
-        }
-        100% {
-            right: -50px;;
-        }
-    }
     .__rigth {
         margin-left: 0;
     }

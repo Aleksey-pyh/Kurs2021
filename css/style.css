@@ -91,11 +91,15 @@ header{
     line-height: 24px;
     color: #2C2A29;
     margin-right: 25px;
+    margin-bottom: 10px;
+    margin: 0 25px 10px 0;
 }
 .contact{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-left: 30px;
+    justify-content: flex-end;
 }
 header .registration,.registration{
     
@@ -120,6 +124,9 @@ header .registration,.registration{
 }
 .bgContent{
     background: right no-repeat;
+}
+.bgContent .content {
+    padding-bottom: 25px;
 }
 .leftAlign{
     max-width: 530px;
@@ -233,28 +240,6 @@ h2{
     position: relative;
     margin-right: 120px;
 }
-/* .enterBlock button::before{
-    content: '';
-    width: 60px;
-    height: 2px;
-    background: #E04E39;
-    position: absolute;
-    right: -80px;
-    top: 50%;
-}
-.enterBlock button::after{
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 10px;
-    top: 11px;
-    right: -8px;
-    background-color:#E04E39;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
-    transform: rotate(-45deg);
-    right: -140px;
-    top: 50%;
-} */
 .enterBlock button:hover .arrow-1{
     animation: arrow-1 1s linear infinite;
 }
@@ -316,4 +301,66 @@ h2{
     font-size: 16px;
     line-height: 112.4%;
     color: #2C2A29;
+}
+@media (max-width:1199px){
+    .bgContent .content{
+        background-color: rgba(255,255,255,0.7);
+    }
+    .lineH1 {
+        border-top: 3px solid #afafaf;
+    }
+    .introItem:before{
+        background-color: #afafaf;
+    }
+}
+
+@media (max-width:595px){
+    header .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact{
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .contact a {
+        margin-right: 0;
+    }
+    .bgContent {
+        background-size: cover;
+    }
+    .lineH1{
+        display: none;
+    }
+    .firstRow {
+        margin-left: 0;
+    }
+    .enterBlock {
+        max-width: 100%;
+    }
+    .enterBlock button {
+        width: 55px;
+        height: 55px;
+        margin-right: 90px;
+        font-size: 14px;
+    }
+    .arrow-1 {
+        width: 40px;
+        right: -50px;
+    }
+    .arrow-1 div {
+        width: 50px;
+    }
+    @keyframes arrow-1 {
+        0% {
+            right: -50px;;
+        }
+        50% {
+            right: -65px;;
+        }
+        100% {
+            right: -50px;;
+        }
+    }
 }
