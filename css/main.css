@@ -262,7 +262,7 @@ footer .content{
     padding: 0;
 }
 /* при отображении модального окно */
-.modal:target {
+.active {
     opacity: 1; /* делаем окно видимым */
     display: block;
 	  pointer-events: auto; /* элемент видим для событий мыши */
