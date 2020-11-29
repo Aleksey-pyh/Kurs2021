@@ -16,41 +16,36 @@ closeBut.onclick = function() {
 window.onload = function() {
     setTimeout(anim, 300);
 };
+// анимация первого экрана
 var anim = function() {
 document.querySelector('header').classList.add('headActive','opacityActive');
 document.querySelector('.leftAlign').classList.add('headActive','opacityActive');
 document.querySelector('.bgContent').classList.add('bgActive','opacityActive');
 };
+//анимация timeline
 var line = document.querySelectorAll('.line');
 var timeline = document.querySelector('.timeline');
-var userDisplay = document.documentElement.clientHeight;
-var heightBlockHide = line[0].getBoundingClientRect().height+line[1].getBoundingClientRect().height;
-var starHeight = (userDisplay - heightBlockHide)/2;
+var userDisplay = document.documentElement.clientHeight; //высота дисплея пользователя
+var heightBlockHide = line[0].getBoundingClientRect().height+line[1].getBoundingClientRect().height; //высота на которую поднимаем таймлайн
+var starHeight = (userDisplay - heightBlockHide)/2; //высота при которой начинаем поднимать
 var title = document.querySelector('#titleTimeLine');
 var maxHeight = 0;
 for(var i=2; i< line.length;i++){
   maxHeight+= line[i].getBoundingClientRect().height+15;
 }
-maxHeight+= document.querySelector('#cenB').getBoundingClientRect().height+25;
-console.log(line[2].getBoundingClientRect().height);
+maxHeight+= document.querySelector('#cenB').getBoundingClientRect().height+25; //высота которую даём блоку wrapperForCanvas 
 window.addEventListener('scroll', function() {
   if(line[0].getBoundingClientRect().y <=starHeight){
-    line[0].classList.add('hideLine');
+    line[0].classList.add('hideLine'); //даём opacity первым двум блокам
     line[1].classList.add('hideLine');
-    // timeline.classList.add('toUpTime');
-    timeline.style.transform = 'translateY(-' + heightBlockHide + 'px)';
-    document.querySelector('.wrapperForCanvas').style.maxHeight = maxHeight + 'px';
+    timeline.style.transform = 'translateY(-' + heightBlockHide + 'px)'; //поднимаем timeline
+    document.querySelector('.wrapperForCanvas').style.maxHeight = maxHeight + 'px';//задаём max-heigth чтобы внизу не было большого отступа
   }
-  if(title.getBoundingClientRect().y>starHeight){
+  if(title.getBoundingClientRect().y>starHeight){ //возращаем всё назад если заголовок h2 оказался выше starHeight
     line[0].classList.remove('hideLine');
     line[1].classList.remove('hideLine');
     timeline.style.transform = 'none';
   }
-  // else{
-  //   line[0].classList.remove('hideLine');
-  //   line[1].classList.remove('hideLine');
-  //   timeline.style.transform = 'none';
-  // }
 });
 
 
