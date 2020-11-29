@@ -1,13 +1,19 @@
 /*timeline*/
+.wrapperForCanvas{
+    position: relative;
+}
 .timeline{
     display: flex;
     flex-wrap: wrap;
+    transition: all .9s;
+    transform: none;
 }
 .line{
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-top: 15px;
+    transition: all .9s;
 }
 .__left{
     align-items: flex-end;
@@ -126,6 +132,14 @@
 :focus{
     outline: none;
 }
+/*anim TimeLine*/
+.toUpTime{
+    transform: translateY(-260px);
+}
+.hideLine{
+    opacity: 0;
+}
+/**/
 summary{
     cursor: pointer;
 }
@@ -134,6 +148,8 @@ summary{
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    margin-top: 25px;
 }
 .centerBlock p{
     
@@ -200,16 +216,13 @@ footer .content{
     flex-wrap: wrap;
 }
 .footDesc p,.footDesc a{
-    
+    margin: 12px 0;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 18px;
     color: #2C2A29;
     text-decoration: none;
-}
-.footDesc a{
-    padding-bottom: 15px;
 }
 @media (max-width:595px){
     .__rigth {

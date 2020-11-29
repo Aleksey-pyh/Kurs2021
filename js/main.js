@@ -17,9 +17,43 @@ window.onload = function() {
     setTimeout(anim, 300);
 };
 var anim = function() {
-document.querySelector('header').classList.add('headActive');
-document.querySelector('.leftAlign').classList.add('headActive');
+document.querySelector('header').classList.add('headActive','opacityActive');
+document.querySelector('.leftAlign').classList.add('headActive','opacityActive');
+document.querySelector('.bgContent').classList.add('bgActive','opacityActive');
 };
+var line = document.querySelectorAll('.line');
+var timeline = document.querySelector('.timeline');
+var userDisplay = document.documentElement.clientHeight;
+var heightBlockHide = line[0].getBoundingClientRect().height+line[1].getBoundingClientRect().height;
+var starHeight = (userDisplay - heightBlockHide)/2;
+var title = document.querySelector('#titleTimeLine');
+var maxHeight = 0;
+for(var i=2; i< line.length;i++){
+  maxHeight+= line[i].getBoundingClientRect().height+15;
+}
+maxHeight+= document.querySelector('#cenB').getBoundingClientRect().height+25;
+console.log(line[2].getBoundingClientRect().height);
+window.addEventListener('scroll', function() {
+  if(line[0].getBoundingClientRect().y <=starHeight){
+    line[0].classList.add('hideLine');
+    line[1].classList.add('hideLine');
+    // timeline.classList.add('toUpTime');
+    timeline.style.transform = 'translateY(-' + heightBlockHide + 'px)';
+    document.querySelector('.wrapperForCanvas').style.maxHeight = maxHeight + 'px';
+  }
+  if(title.getBoundingClientRect().y>starHeight){
+    line[0].classList.remove('hideLine');
+    line[1].classList.remove('hideLine');
+    timeline.style.transform = 'none';
+  }
+  // else{
+  //   line[0].classList.remove('hideLine');
+  //   line[1].classList.remove('hideLine');
+  //   timeline.style.transform = 'none';
+  // }
+});
+
+
 /* -----------------------------------------------
 /* How to use? : Check the GitHub README
 /* ----------------------------------------------- */
