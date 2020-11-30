@@ -12,7 +12,7 @@
 }
 
 @font-face {
-    font-family: 'Circe Extra';
+    font-family: 'Circe';
     src: url('Circe-ExtraBold.eot');
     src: local('Circe Extra Bold'), local('Circe-ExtraBold'),
         url('./fonts/Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
@@ -171,7 +171,6 @@ header .registration,.registration{
     max-width: 530px;
 }
 h1{
-    
     font-style: normal;
     font-weight: 800;
     font-size: 62px;
