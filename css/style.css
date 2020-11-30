@@ -148,7 +148,7 @@ header .registration,.registration{
     -webkit-animation-name: slideme;
     animation-name: slideme;
     -webkit-animation-duration: 3s;
-    animation-duration: 3s;
+    animation-duration: 6s;
     -webkit-animation-delay: 0.05s;
     animation-delay: 0.05s;
     -webkit-animation-timing-function: ease-in-out;
@@ -164,6 +164,7 @@ header .registration,.registration{
 }
 .bgContent{
     background: right no-repeat;
+    background-size: contain;
 }
 .bgContent .content {
     padding-bottom: 25px;
@@ -381,7 +382,11 @@ header{
         background-color: #afafaf;
     }
 }
-
+@media (max-width:830px){
+    .bgContent{
+        background-size: cover;
+    }
+}
 @media (max-width:595px){
     header .content{
         flex-direction: column;
