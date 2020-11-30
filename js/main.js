@@ -29,16 +29,16 @@ var userDisplay = document.documentElement.clientHeight; //высота дисп
 var heightBlockHide = line[0].getBoundingClientRect().height+line[1].getBoundingClientRect().height; //высота на которую поднимаем таймлайн
 var starHeight = (userDisplay - heightBlockHide)/2; //высота при которой начинаем поднимать
 var title = document.querySelector('#titleTimeLine');
-var maxHeight = 0;
-for(var i=2; i< line.length;i++){
-  maxHeight+= line[i].getBoundingClientRect().height+15;
-}
-maxHeight+= document.querySelector('#cenB').getBoundingClientRect().height+25; //высота которую даём блоку wrapperForCanvas 
 window.addEventListener('scroll', function() {
   if(line[0].getBoundingClientRect().y <=starHeight){
     line[0].classList.add('hideLine'); //даём opacity первым двум блокам
     line[1].classList.add('hideLine');
     timeline.style.transform = 'translateY(-' + heightBlockHide + 'px)'; //поднимаем timeline
+    var maxHeight = 0;
+    for(var i=2; i< line.length;i++){
+      maxHeight+= line[i].getBoundingClientRect().height+15;
+    }
+    maxHeight+= document.querySelector('#cenB').getBoundingClientRect().height+25;//высота которую даём блоку wrapperForCanvas 
     document.querySelector('.wrapperForCanvas').style.maxHeight = maxHeight + 'px';//задаём max-heigth чтобы внизу не было большого отступа
   }
   if(title.getBoundingClientRect().y>starHeight){ //возращаем всё назад если заголовок h2 оказался выше starHeight
