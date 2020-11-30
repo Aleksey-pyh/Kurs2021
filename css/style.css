@@ -206,7 +206,8 @@ h2{
 }
 .lineH1{
     border-top: 3px solid #E2E2E2;
-    min-width: 238px;
+    min-width: 218px;
+    margin-right: 20px;
 }
 .firstRow{
     margin-left: 30px;
